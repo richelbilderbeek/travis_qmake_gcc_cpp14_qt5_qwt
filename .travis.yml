@@ -30,3 +30,6 @@ script:
   - qmake -qt=qt5
   - make
   - ./travis_qmake_gcc_cpp14_qt5_qwt
+
+after_failure:
+  - apt-cache search qwt
