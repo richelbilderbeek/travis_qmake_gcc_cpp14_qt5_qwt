@@ -29,3 +29,8 @@ Less complex builds:
  * Use C++11: [travis_qmake_gcc_cpp11_qt5_qwt](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp11_qt5_qwt)
  * Use C++98: [travis_qmake_gcc_cpp98_qt5_qwt](https://www.github.com/richelbilderbeek/travis_qmake_gcc_cpp98_qt5_qwt)
 
+## External links
+
+ * [Other Qwt examples](https://github.com/richelbilderbeek/Qwt)
+
+

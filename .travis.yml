@@ -18,7 +18,7 @@ install:
   - sudo apt-get install -qq g++-5
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
   # Qwt
-  - sudo apt-get install -qq libqwt-qwt5
+  - sudo apt-get install -qq libqwt-qt5
 
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
 before_script:
