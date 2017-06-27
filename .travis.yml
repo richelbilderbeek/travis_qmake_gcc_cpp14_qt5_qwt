@@ -18,6 +18,7 @@ install:
   - sudo apt-get install -qq g++-5
   - sudo update-alternatives --install /usr/bin/g++ g++ /usr/bin/g++-5 90
   # Qwt
+  - apt-cache search qwt
   - sudo apt-get install -qq libqwt-qt5-dev
 
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
@@ -31,5 +32,3 @@ script:
   - make
   - ./travis_qmake_gcc_cpp14_qt5_qwt
 
-after_failure:
-  - apt-cache search qwt
