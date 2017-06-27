@@ -9,7 +9,7 @@ int main(int argc, char **argv)
 {
   QApplication a(argc, argv);
 
-  QwtPlot plot(QwtText("travis_qmake_gcc_cpp14_qwt"));
+  QwtPlot plot(QwtText("travis_qmake_gcc_cpp14_qt5_qwt"));
   plot.setGeometry(0,0,640,400);
   plot.setAxisScale(QwtPlot::xBottom, 0.0,2.0 * M_PI);
   plot.setAxisScale(QwtPlot::yLeft,-1.0,1.0);
