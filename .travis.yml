@@ -29,3 +29,7 @@ script:
   - make
   - ./travis_qmake_gcc_cpp14_qt5_qwt
 
+after_failure:
+  - apt-cache search libqwt
+  - cd /usr/include
+  - find . -name qwt_plot.h
