@@ -15,8 +15,12 @@ install:
   - sudo apt-get install -qq libqt5webkit5-dev qtdeclarative5-dev
   - export QMAKE=/usr/lib/x86_64-linux-gnu/qt5/bin/qmake
   # Qwt
-  - apt-cache search qwt
   - sudo apt-get install -qq libqwt-dev
+  # Qwt, from source
+  #- my_github=${PWD##*/}  
+  #- cd ..
+  #- svn export svn://svn.code.sf.net/p/qwt/code/branches/qwt-6.1
+  #- cd $my_github
 
 # Start virtual X server, from https://docs.travis-ci.com/user/gui-and-headless-browsers/
 before_script:
@@ -32,5 +36,7 @@ script:
 after_failure:
   - apt-cache search libqwt
   - cd /usr/include
+  - find . -name qwt_plot.h
+  - cd /usr/local
   - find . -name qwt_plot.h
   - cat /usr/include/qwt/qwt_global.h | egrep "QWT_VERSION_STR"

@@ -11,8 +11,7 @@ QMAKE_CXXFLAGS += -std=c++14
 QT += core widgets
 
 # Qwt
-INCLUDEPATH += /usr/include/qwt
-LIBS += -lqwt
+INCLUDEPATH += $$PWD/../qwt-6.1/src
 
 message(Host name: $$QMAKE_HOST.name)
 contains(QMAKE_HOST.name,fwn-biol-132-102) {
