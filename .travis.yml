@@ -33,3 +33,4 @@ after_failure:
   - apt-cache search libqwt
   - cd /usr/include
   - find . -name qwt_plot.h
+  - cat /usr/include/qwt/qwt_global.h | egrep "QWT_VERSION_STR"

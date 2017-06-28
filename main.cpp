@@ -1,13 +1,21 @@
 #include <cmath>
+#include <iostream>
+
+#pragma GCC diagnostic push
+#pragma GCC diagnostic ignored "-Weffc++"
 #include <QApplication>
 #include <QTimer>
-#include <qwt_plot.h>
+#pragma GCC diagnostic ignored "-pedantic"
 #include <qwt_plot_curve.h>
-#include <qwt_point_data.h>
+#include <qwt_plot.h>
+#include <qwt_global.h>
+#pragma GCC diagnostic pop
 
 int main(int argc, char **argv)
 {
   QApplication a(argc, argv);
+  std::clog << QWT_VERSION_STR << '\n';
+  //static_assert(QWT_VERSION == 0x060000, "Use Qwt v6.0");
 
   QwtPlot plot(QwtText("travis_qmake_gcc_cpp14_qt5_qwt"));
   plot.setGeometry(0,0,640,400);
